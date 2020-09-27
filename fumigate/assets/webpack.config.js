@@ -51,7 +51,8 @@ module.exports = (env, options) => {
       new Webpack.ProvidePlugin({ // inject ES5 modules as global vars
         $: 'jquery',
         jQuery: 'jquery',
-        'window.jQuery': 'jquery'
+        'window.jQuery': 'jquery',
+        Popper: ['popper.js', 'default']
       })
     ]
     .concat(devMode ? [new HardSourceWebpackPlugin()] : [])
